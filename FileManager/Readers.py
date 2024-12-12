@@ -32,6 +32,6 @@ def read_data_from_file(file_name: str):
                 data = line.split('\t')
                 measurment.IP_ADRESS = convert_ip_str_int(data[0])
                 measurment.TIMESTAMP = datetime.strptime(data[1], date_time_format)
-                measurment.VALUE = int(data[2])
+                measurment.VALUE = float(data[2])
                 result.append(measurment)
     return result
